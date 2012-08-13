@@ -28,7 +28,7 @@ import java.util.Map;
  * Modify Date: 8/12/12 7:43 AM
  * Modify:
  */
-public class messageClient {
+public class MessageClient {
     /**
      * send message to server
      *
