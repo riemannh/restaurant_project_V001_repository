@@ -73,11 +73,6 @@ public class SQLiteBasicDAO<T> {
         return resultList;
     }
 
-    public void insert(String sql){
-        menuDataBase.insert()
-    }
-
-
     public SQLiteDatabase getMenuDataBase() {
         return menuDataBase;
     }
