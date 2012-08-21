@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ 
+<!DOCTYPE sqlMap 
+    PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+    "http://www.ibatis.com/dtd/sql-map-2.dtd"> 
+ 
+<sqlMap namespace="User"> 
+ 
+<typeAlias alias="user" type="com.test.User"/>  
+  <select id="getUser" 
+    parameterClass="java.lang.String" 
+    resultClass="user"> 
+    <![CDATA[ 
+    select 
+      name, 
+      sex 
+    from t_user
+    where name = #name# 
+    ]]> 
+  </select> 
+ 
+  <update id="updateUser" 
+parameterClass="user"> 
+<![CDATA[ 
+    UPDATE t_user 
+    SET  
+      name=#name#, 
+      sex=#sex# 
+  WHERE id = #id# 
+]]> 
+  </update> 
+ 
+  <insert id="insertUser" 
+    parameterClass="user" 
+    > 
+    INSERT INTO t_user ( 
+      name, 
+      sex)  
+    VALUES ( 
+      #name#,  
+      #sex# 
+    ) 
+  </insert>  
+ 
+  <delete id="deleteUser" 
+    parameterClass="java.lang.String"> 
+    delete from t_user 
+    where id = #value# 
+  </delete>  
+ 
+</sqlMap> 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ <constant name="struts.devMode" value="false"></constant>
+ <constant name="struts.i18n.reload" value="false"></constant>
+ <constant name="struts.configuration.xml.reload" value="false"></constant>
+ <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+ <constant name="struts.ui.theme" value="simple"></constant>
+ <constant name="struts.multipart.maxSize" value="10000000000" />
+ <constant name="struts.objectFactory" value="spring"/>
+ <include file="struts-default.xml"></include>
+ <include file="conf/struts-oper.xml"></include>
+ <package name="testchannel" extends="struts-default">
+  <global-results>
+   <result name="success">/commonSuccess.jsp</result>
+   <result name="globalError">/commonError.jsp</result>
+  </global-results>
+  <global-exception-mappings>
+   <exception-mapping result="globalError" exception="java.lang.Exception" />
+  </global-exception-mappings>
+  
+ 
+  <action name="login" class="com.chofo.action.LoginAction">
+   <result name="login">/index.jsp</result>
+   <result name="worktable">/frame/frame.jsp</result>
+  </action>
+  
+  <action name="menu" class="com.chofo.action.MenuAction">
+   <result name="menulist">/frame/menu.jsp</result>
+  </action>
+  
+ </package>
+</struts> 

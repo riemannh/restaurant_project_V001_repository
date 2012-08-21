@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ <constant name="struts.devMode" value="false"></constant>
+ <constant name="struts.i18n.reload" value="false"></constant>
+ <constant name="struts.configuration.xml.reload" value="false"></constant>
+ <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+ <constant name="struts.ui.theme" value="simple"></constant>
+ <constant name="struts.multipart.maxSize" value="10000000000" />
+ <constant name="struts.objectFactory" value="spring"/>
+ 
+ <package name="oper" extends="struts-default">
+  <global-results>
+   <result name="success">/test/commonSuccess.jsp</result>
+   <result name="globalError">/test/commonError.jsp</result>
+  </global-results>
+  <global-exception-mappings>
+   <exception-mapping result="globalError" exception="java.lang.Exception" />
+  </global-exception-mappings>
+
+  <action name="operaction" class="com.huawei.boss.test.action.OperAction">
+   <result name="opertable">/oper/operList.jsp</result>
+  </action>
+ </package>
+</struts>  

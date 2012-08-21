@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="chofoSSI"
+  id="myeclipse.1342621179070"
+  context-root="/chofoSSI"
+  j2ee-spec="5.0"
+  archive="chofoSSI.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

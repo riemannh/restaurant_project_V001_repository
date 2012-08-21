@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+   xmlns:jee="http://www.springframework.org/schema/jee"  
+   xmlns:tx="http://www.springframework.org/schema/tx"   
+   xmlns:context="http://www.springframework.org/schema/context"      
+   xsi:schemaLocation="http://www.springframework.org/schema/beans classpath:org/springframework/beans/factory/xml/spring-beans-2.5.xsd   
+                       http://www.springframework.org/schema/tx classpath:org/springframework/transaction/config/spring-tx-2.5.xsd   
+                        http://www.springframework.org/schema/jee classpath:org/springframework/ejb/config/spring-jee-2.5.xsd  
+                        http://www.springframework.org/schema/context classpath:org/springframework/context/config/spring-context-2.5.xsd"  
+    default-lazy-init="true">  
+      
+ <!-- baseDao -->
+ <bean id="baseDao" class="com.chofo.dao.impl.BaseDaoImpl">
+     <property name="sqlMapClientTemplate" ref="sqlMapClientTemplate"></property>
+ </bean>
+ 
+ <!-- baseAction -->
+ <bean id="baseAction" class="com.chofo.action.BaseAction">
+ </bean>
+ 
+ <bean id="menuDao" class="com.chofo.dao.impl.MenuDaoImpl" parent = "baseDao">
+ </bean>
+ <bean id="menuService" class="com.chofo.service.impl.MenuServiceImpl">
+ <property name="menuDao" ref="menuDao" />
+ </bean>
+ <bean id="menuAction" class="com.chofo.action.MenuAction" parent="baseAction">
+ <property name="menuService" ref="menuService" />
+ </bean>
+ 
+</beans>
