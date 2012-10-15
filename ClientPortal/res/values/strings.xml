@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ClientPortal</string>
+    <string name="app_name">点菜系统</string>
+    <string name="hello">Hello World, index!</string>
+    <string name="menu_title">菜单页</string>
+    <string name="menu_detail_title">菜单详情</string>
+    <string name="table_select_title">选择桌位</string>
 </resources>

@@ -5,8 +5,43 @@
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="16"/>
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name=".index"
+        <activity android:name=".Index"
                   android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Menu"
+                  android:label="@string/menu_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MenuDetail"
+                  android:label="@string/menu_detail_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TableSelect"
+                  android:label="@string/table_select_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Confirm"
+                  android:label="@string/table_select_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Success"
+                  android:label="@string/table_select_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
